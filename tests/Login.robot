@@ -48,7 +48,7 @@ Incorret Pass
 
 User not Found 
 
-    [Tags]          user_404
+    [Tags]          user_404        no_user
 
     ${user}         Create Dictionary       email=danyel@email.com
     ...                                     password=abc123
