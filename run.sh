@@ -1,3 +1,4 @@
 robot -l NONE -o NONE -r NONE tasks/Delorean.robot
-robot -d ./logs tests/Login.robot
+robot -d ./logs tests/BeGeek.robot
+#robot -d ./logs tests/Login.robot
 #robot -d ./logs tests/Signup.robot

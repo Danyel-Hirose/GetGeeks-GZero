@@ -37,4 +37,12 @@ def factory_user_login():
         'password': '123456',
     }
 
+def factory_user_be_geek():
+    
+    return {
+        'name': "Kim",
+        'lastname': "Datcom",
+        'email': "kim_dot@email.com",
+        'password': '123456',
+    }
      
