@@ -8,3 +8,12 @@ Add User From Database
     Connect To Postgres
     Insert User    ${user}
     Disconnect From Database
+
+Do Login
+
+    [Arguments]                 ${user}
+
+    Go to Login Page
+    Fill Credetials             ${user}
+    Submit Login form
+    User Should Be Logged In    ${user}

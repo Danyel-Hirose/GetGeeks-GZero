@@ -7,15 +7,19 @@ Library   String
 *Variables*
 
 *Keywords*
-Go to Be_Geek form
-    Click       text=Seja um Geek
+Go to Geek Form  
+    Click       xpath=a[href="/be-geek"] >> text=Seja um Geek
 
     Wait For Elements State
-    ...             css=.title >> text=Trabalhe com suporte técnico quando e onde quiser
+    ...             css=.be-geek-form
     ...             visible     5
 
-Fill up Be_geek form
-    [Arguments]             ${user}
+    #Wait For Elements State
+    #...             css=.title >> text=Trabalhe com suporte técnico quando e onde quiser
+    #...             visible     5
+
+Fill Geek form
+    [Arguments]             ${geek_profile}
 
     Fill Text               xpath=//*[@class="sc-crrszt fQQZxO"]//input[@id="whatsapp"]             ${user}[whatsapp]
     Fill Text               id=desc                                                                 ${user}[description]
