@@ -39,10 +39,10 @@ Insert User
 
 Users Seed
 
-    ${user}     factory_user_login
+    ${user}     factory_user   login
 
     Insert User  ${user}
 
-    ${user2}     factory_user_be_geek
+    ${user2}     factory_user   be_geek
 
     Insert User  ${user2}

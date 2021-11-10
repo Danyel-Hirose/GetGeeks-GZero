@@ -12,7 +12,7 @@ Test Teardown           End Session
 *Test Cases*
 Be a Geek
 
-    ${user}      factory_user_be_geek
+    ${user}      factory_user   be_geek
 
     Do Login     ${user}
     Go to Geek Form   

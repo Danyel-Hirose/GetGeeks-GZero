@@ -11,7 +11,7 @@ Register a new user
 
     [Tags]      register 
 
-    ${user}     factory_user_01
+    ${user}     factory_user    faker
 
     Go To Signup Form
     Fill Signup Form  ${user}
@@ -21,7 +21,7 @@ Register a new user
 Duplicate user
     [Tags]          attempt_signup
 
-    ${user}                  factory_user_01
+    ${user}                  factory_user    faker
     Add User From Database   ${user}
 
     Go To Signup Form
@@ -32,7 +32,7 @@ Duplicate user
 Wrong Email
     [Tags]          attempt_signup
 
-    ${user}         factory_wrong_email
+    ${user}         factory_user    wrong_email
 
     Go To Signup Form
     Fill Signup Form  ${user}

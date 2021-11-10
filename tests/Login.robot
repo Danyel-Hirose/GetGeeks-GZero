@@ -14,7 +14,7 @@ Test Teardown           End Session
 User Login GetGeeks
     [Tags]                  login           login_signup
 
-    ${user}                 factory_user_login
+    ${user}                 factory_user    login
          
     Go to Login Page
     Fill Credetials             ${user}                      
@@ -26,7 +26,7 @@ Wrong Login
 
     [Tags]                  attempt_login
     
-    ${user}                 factory_user_01
+    ${user}                 factory_user    faker
 
     Go to Login Page
     Fill Credetials             ${user}
