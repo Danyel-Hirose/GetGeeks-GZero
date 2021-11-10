@@ -44,5 +44,12 @@ def factory_user_be_geek():
         'lastname': "Datcom",
         'email': "kim_dot@email.com",
         'password': '123456',
+        'geek_profile' : {
+                'whatsapp': "12123456789",
+                'description': "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisi nibh, porttitor sed sagittis suscipit, sollicitudin id quam. Cras tempus quis tortor molestie mollis. Morbi interdum lectus sit amet condimentum sagittis.",
+                'printer_repair': 'Sim',
+                'type_work': 'Remoto',
+                'cost': '175',
+        }
     }
      

@@ -14,6 +14,9 @@ Be a Geek
 
     ${user}      factory_user_be_geek
 
-    Do Login     ${user}   
+    Do Login     ${user}
+    Go to Geek Form   
+    Fill Geek form  ${user}[geek_profile]
+    Submit Geek form
+    Geek Form Should Be Sucess
 
-    

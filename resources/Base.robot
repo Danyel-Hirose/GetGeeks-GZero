@@ -6,6 +6,7 @@ Library     Collections
 Library     factories/Users.py
 
 Resource    actions/_SharedActions.robot
+Resource    actions/BeGeekActions.robot
 Resource    actions/SingupActions.robot
 Resource    actions/LoginActions.robot
 
@@ -17,7 +18,7 @@ ${BASE_URL}         https://getgeeks-danyel-miranda.herokuapp.com
 
 *Keywords*
 Start Session
-    New Browser     chromium        headless=False      slowMo=00:00:00
+    New Browser     chromium        headless=False      slowMo=00:00:01
     New Page        ${BASE_URL}
 
 End Session

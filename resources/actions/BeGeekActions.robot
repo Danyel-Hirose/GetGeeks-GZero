@@ -8,7 +8,7 @@ Library   String
 
 *Keywords*
 Go to Geek Form  
-    Click       xpath=a[href="/be-geek"] >> text=Seja um Geek
+    Click           css=a[href="/be-geek"] >> text=Seja um Geek
 
     Wait For Elements State
     ...             css=.be-geek-form
@@ -21,15 +21,18 @@ Go to Geek Form
 Fill Geek form
     [Arguments]             ${geek_profile}
 
-    Fill Text               xpath=//*[@class="sc-crrszt fQQZxO"]//input[@id="whatsapp"]             ${user}[whatsapp]
-    Fill Text               id=desc                                                                 ${user}[description]
-    Select Options By       id=printer_repair                                                       value       ${user}[printer_repair]
-    Select Options By       id=work                                                                 value       ${user}[type_work]
-    Fill Text               id=cost                                                                 ${user}[cost]
+    Fill Text               xpath=//*[@class="sc-crrszt fQQZxO"]//input[@id="whatsapp"]             ${geek_profile}[whatsapp]
+    Fill Text               id=desc                                                                 ${geek_profile}[description]
+    Select Options By       id=printer_repair                                                       value       ${geek_profile}[printer_repair]
+    Select Options By       id=work                                                                 value       ${geek_profile}[type_work]
+    Fill Text               id=cost                                                                 ${geek_profile}[cost]
     
-Submit Be_geek form
+Submit Geek form
     Click           xpath=//button[@type="submit"] >> text=Quero ser um Geek
 
+Geek Form Should Be Sucess
+    ${expected_message}         Set Variable        Seu Cadastro está na nossa lista de geeks. Agora é só ficar de olho no seu WhatsApp.
+
     Wait For Elements State
-    ...             xpath=//h1[text()="Parabéns!"]
+    ...             css=p >> text=${expected_message}
     ...             visible     5
