@@ -50,3 +50,7 @@ Users Seed
     ${user3}     factory_user   short_desc
 
     Insert User  ${user3}
+
+    ${user4}     factory_user   long_desc
+
+    Insert User  ${user4}

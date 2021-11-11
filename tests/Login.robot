@@ -17,7 +17,7 @@ User Login GetGeeks
     ${user}                 factory_user    login
          
     Go to Login Page
-    Fill Credetials             ${user}                      
+    Fill Credentials             ${user}                      
     Check "Remember-me"
     Submit Login form
     User Should Be Logged In    ${user}
@@ -29,7 +29,7 @@ Wrong Login
     ${user}                 factory_user    faker
 
     Go to Login Page
-    Fill Credetials             ${user}
+    Fill Credentials             ${user}
     Check "Remember-me"
     Submit Login form
     Modal Content Should Be                 Usuário e/ou senha inválidos.
@@ -42,7 +42,7 @@ Incorret Pass
     ...                                     password=abc123
 
     Go to Login Page
-    Fill Credetials                         ${user}
+    Fill Credentials                         ${user}
     Submit Login form
     Modal Content Should Be                 Usuário e/ou senha inválidos.
 
@@ -54,7 +54,7 @@ User not Found
     ...                                     password=abc123
 
     Go to Login Page
-    Fill Credetials                         ${user}
+    Fill Credentials                         ${user}
     Submit Login form
     Modal Content Should Be                 Usuário e/ou senha inválidos.
 
@@ -66,7 +66,7 @@ Incorret Email
     ...                                     password=abc123
 
     Go to Login Page
-    Fill Credetials                         ${user}
+    Fill Credentials                         ${user}
     Submit Login form
     Tooltip email should Be 
 
@@ -78,7 +78,7 @@ Required Email
 
     Go To Login Page
     Fill Credentials    ${user}
-    Submit Credentials
+    Submit Login form
     Alert Span Should Be    E-mail obrigatório
 
 Required Pass
@@ -87,7 +87,7 @@ Required Pass
 
     Go To Login Page
     Fill Credentials    ${user}
-    Submit Credentials
+    Submit Login form
     Alert Span Should Be    Senha obrigatória
 
 Required Fields
@@ -97,6 +97,6 @@ Required Fields
     ...                     Senha obrigatória
 
     Go To Login Page
-    Submit Credentials
+    Submit Login form
     Alert Spans Should Be    ${expected_alerts} 
 

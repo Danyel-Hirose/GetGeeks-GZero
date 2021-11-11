@@ -1,9 +1,6 @@
 *Settings*
 Documentation           Documentação Base
 
-Library   Browser
-Library   String 
-
 *Variables*
 
 ${INPUT_EMAIL}          id=email
@@ -19,7 +16,7 @@ Go to Login Page
     ...         css=.login-form
     ...         visible     5
 
-Fill Credetials
+Fill Credentials
 
     [Arguments]             ${user}          
 

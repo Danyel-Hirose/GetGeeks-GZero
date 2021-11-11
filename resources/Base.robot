@@ -3,6 +3,7 @@ Documentation           Base Test
 
 Library     Browser
 Library     Collections
+
 Library     factories/Users.py
 
 Resource    actions/_SharedActions.robot
