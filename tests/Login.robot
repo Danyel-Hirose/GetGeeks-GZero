@@ -71,30 +71,32 @@ Incorret Email
     Tooltip email should Be 
 
 
+Required Email
+    [Tags]      temp
+    
+    ${user}         Create Dictionary       email=${EMPTY}      password=abc123
+
+    Go To Login Page
+    Fill Credentials    ${user}
+    Submit Credentials
+    Alert Span Should Be    E-mail obrigatório
+
+Required Pass
+    [Tags]      temp
+    ${user}         Create Dictionary       email=papito@hotmail.com      password=${EMPTY}
+
+    Go To Login Page
+    Fill Credentials    ${user}
+    Submit Credentials
+    Alert Span Should Be    Senha obrigatória
+
 Required Fields
+    [Tags]      temp
+    @{expected_alerts}      Create List
+    ...                     E-mail obrigatório
+    ...                     Senha obrigatória
 
-    [Tags]                  attempt_signup      reqf
-
-    Go to Login Page
-    Check "Remember-me"
-    Submit Login form
-    Span Notification Should Be   E-mail obrigatório
-    Span Notification Should Be   Senha obrigatória
-
-
-Empty email
-    [Tags]                  attempt_signup      reqf
-
-    Go to Login Page
-    Check "Remember-me"
-    Submit Login form
-    Span Notification Should Be   E-mail obrigatório
-
-Empty password
-    [Tags]                  attempt_signup      reqf
-
-    Go to Login Page
-    Check "Remember-me"
-    Submit Login form
-    Span Notification Should Be   Senha obrigatória
+    Go To Login Page
+    Submit Credentials
+    Alert Spans Should Be    ${expected_alerts} 
 
