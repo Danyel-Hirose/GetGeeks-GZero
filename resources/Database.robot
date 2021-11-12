@@ -54,3 +54,7 @@ Users Seed
     ${user4}     factory_user   long_desc
 
     Insert User  ${user4}
+
+    ${user5}     factory_user   be_geek_fields
+
+    Insert User  ${user5}

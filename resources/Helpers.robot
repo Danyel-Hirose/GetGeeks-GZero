@@ -14,6 +14,6 @@ Do Login
     [Arguments]                 ${user}
 
     Go to Login Page
-    Fill Credetials             ${user}
+    Fill Credentials             ${user}
     Submit Login form
     User Should Be Logged In    ${user}
