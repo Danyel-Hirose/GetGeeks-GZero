@@ -30,12 +30,4 @@ Short Description
     Submit Geek form
     Alert Span Should Be  A descrição deve ter no minimo 80 caracteres
 
-Long Description
 
-    ${user}      factory_user   long_desc  
-    Do Login     ${user}
-
-    Go to Geek Form   
-    Fill Geek form  ${user}[geek_profile]
-    Submit Geek form
-    Alert Span Should Be  A descrição deve ter no máximo 255 caracteres
