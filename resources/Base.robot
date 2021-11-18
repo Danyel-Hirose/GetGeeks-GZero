@@ -21,6 +21,7 @@ ${BASE_URL}         https://getgeeks-danyel-miranda.herokuapp.com
 Start Session
     New Browser     chromium        headless=False      slowMo=00:00:01
     New Page        ${BASE_URL}
+    Set Viewport Size               1280    720
 
 End Session
     Take Screenshot                 fullPage=True
