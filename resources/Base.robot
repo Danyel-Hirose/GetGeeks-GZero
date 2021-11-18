@@ -14,6 +14,9 @@ Resource    actions/LoginActions.robot
 Resource    Database.robot
 Resource    Helpers.robot
 
+
+#git push -u origin main
+
 *Variables*
 ${BASE_URL}         https://getgeeks-danyel-miranda.herokuapp.com
 
