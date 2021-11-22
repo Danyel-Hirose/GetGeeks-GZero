@@ -5,6 +5,7 @@ Library     Browser
 Library     Collections
 
 Library     factories/Users.py
+Library     Utils.py
 
 Resource    actions/_SharedActions.robot
 Resource    actions/BeGeekActions.robot
@@ -16,15 +17,17 @@ Resource    Helpers.robot
 
 
 #git push -u origin main
+#./run.sh
 
 *Variables*
 ${BASE_URL}         https://getgeeks-danyel-miranda.herokuapp.com
 
 *Keywords*
 Start Session
-    New Browser     chromium        headless=False      slowMo=00:00:01
-    New Page        ${BASE_URL}
+    New Browser                     ${BROWSER}          headless=${HEADLESS}       slowMo=00:00:01
+    New Page                        ${BASE_URL}
     Set Viewport Size               1280    720
 
-End Session
-    Take Screenshot                 fullPage=True
+After Test
+    ${shot_name}                    Screenshot Name
+    Take Screenshot                 fullPage=True       filename=${shot_name}

@@ -4,7 +4,7 @@ Documentation           Login do projeto GetGeeks
 Resource                ${EXECDIR}/resources/Base.robot
 
 Test Setup              Start Session
-Test Teardown           End Session
+Test Teardown           After Test
 
 #robot -d ./logs tests/Login.robot
 #./run.sh
@@ -12,7 +12,7 @@ Test Teardown           End Session
 *Test Cases*
 
 User Login GetGeeks
-    [Tags]                  login           login_signup
+    [Tags]                  login           login_signup        smoke
 
     ${user}                 factory_user    login
          

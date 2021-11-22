@@ -4,12 +4,12 @@ Documentation           Signup Test Suite
 Resource        ${EXECDIR}/resources/Base.robot
 
 Test Setup      Start Session
-Test Teardown   End Session
+Test Teardown   After Test
 
 *Test Cases*
 Register a new user
 
-    [Tags]      register 
+    [Tags]      register    smoke
 
     ${user}     factory_user    faker
 
