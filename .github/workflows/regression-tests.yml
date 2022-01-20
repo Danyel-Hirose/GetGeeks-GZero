@@ -83,7 +83,7 @@ jobs:
     - name: Test Reporter
       uses: dorny/test-reporter@v1.5.0
       with:
-        name: API Test Result
+        name: Web Test Result
         path: frontend/logs/xunit.xml
         reporter: java-junit      
         
