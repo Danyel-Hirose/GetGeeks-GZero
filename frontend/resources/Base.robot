@@ -16,7 +16,8 @@ Resource    Database.robot
 Resource    Helpers.robot
 
 
-#git push -u origin main
+#git push -u origin main - "Empurrar"
+#git pull origin main - "Puxar"
 #./run.sh
 
 *Variables*
