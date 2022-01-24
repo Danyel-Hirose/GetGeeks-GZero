@@ -39,14 +39,10 @@ Insert User
 
 Users Seed
 
-    ${user}     factory_user   login
+    ${users}    users_to_insert_db
 
-    Insert User  ${user}
+    FOR         ${user}     IN      @{users}
 
-    ${user2}     factory_user   be_geek
+                Insert User  ${user}
 
-    Insert User  ${user2}
-
-    ${user3}     factory_user   attempt_BeGeek
-
-    Insert User  ${user3}
+    END
