@@ -1,6 +1,6 @@
 robot -l NONE -o NONE -r NONE tasks/Delorean.robot
-pabot -x xunit.xml -d ./logs -v BROWSER:chromium -v HEADLESS:True  tests
-
+pabot -x xunit.xml -d ./logs -v BROWSER:chromium -v HEADLESS:True  tests/SearchForGeeks.robot
+#pabot -x xunit.xml -d ./logs -v BROWSER:chromium -v HEADLESS:True  tests
 
 # Dando um jeito na Evidencia:
 rm -rf ./logs/browser

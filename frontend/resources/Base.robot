@@ -7,13 +7,16 @@ Library     Collections
 Library     factories/Users.py
 Library     Utils.py
 
+#Actions
 Resource    actions/_SharedActions.robot
 Resource    actions/BeGeekActions.robot
 Resource    actions/SingupActions.robot
 Resource    actions/LoginActions.robot
 
+#Resources
 Resource    Database.robot
 Resource    Helpers.robot
+Resource    Services.robot
 
 
 #git push -u origin main - "Empurrar"
